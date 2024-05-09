@@ -1,0 +1,64 @@
+@import './color.css';
+
+.checkout{
+    padding: 2rem;
+    background-color:var(--blanco);
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    height: calc(100vh - 50px);
+
+}
+.productos--titulo{
+    color: var(--negro)
+}
+.produtos--pagos{
+    display: flex;
+    flex-direction: column;
+}
+.form--tarjetas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.productos--domicilio{
+    display: flex;
+    flex-direction: column;
+}
+
+.form--datos{
+    display: flex;
+    flex-direction: column;
+}
+.form--imput{
+    border: 3px solid var(--grisClaro);
+    height: 2.5rem;
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: var(--gris);
+}
+.form--button{
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    background-color: var(--naranja);
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+.form--label{
+    padding-top: 0.5rem;
+}
+.tarjeta{
+    width: 2rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+

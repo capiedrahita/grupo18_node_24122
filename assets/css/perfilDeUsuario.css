@@ -1,0 +1,175 @@
+@import './color.css';
+
+.flex-container {
+    padding: 4px;
+    display:flex;
+    flex-direction: row;
+  }
+  
+  .item-card-perfil {
+    background-image: url("../img/fondo/fondo-blanco-figuras-geometricas-colores_578340-31.avif");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    min-width: 300px;
+    max-height: 500px;
+    background-color:var(--negro);
+    border: 1px solid black;
+    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
+    border-radius: 10px;
+  }
+  
+  .contenedor-de-datos-perfil {
+    display: flex;
+    flex-direction: column;
+    color: var(--negro);
+    min-width: 280px;
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px rgb(178, 178, 178);
+  }
+  
+  .card-pefil-img-container {
+    display: flex;
+    justify-content: center;
+  }
+  .item_parrafo{
+    color:var(--negro);
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-pefil-img-container img {
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
+  }
+  
+  .item-card-informacionContacto-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .content--button--perfil{
+    background-color: var(--gris);
+    color:var(--blanco);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+ 
+  .content--button--perfil:hover{
+    font-size: 17px;
+    color: var(--naranja);
+    text-decoration: none;
+  }
+  
+  .button-container button {
+    margin-top: 32px;
+    border: none;
+    color:var(--negro);
+    margin-bottom: 12px;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #685aff;
+    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
+  }
+  
+  .item-card-perfil-publicacion {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    max-height: 455px;
+    background-color: var(--negro);
+    border: 1px solid black;
+    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
+    border-radius: 10px;
+    transition: background-color 2s;
+  }
+  
+  .item-card-perfil-publicacion:hover {
+  color: var(--negro);
+  background-color: black;
+  }
+  
+  .item-card-perfil-publicacion a {
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  
+  .item-card-perfil-publicacion a:hover {
+  color: white;
+  }
+  
+  
+  .img-publicacion-container {
+  display: flex;
+  }
+  
+  
+  
+  .img-publicacion {
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 1px 15px 0px rgb(54, 54, 54);
+  }
+  
+  .coment-container {
+    position: absolute;
+   align-self: flex-end;
+   background-color: white;
+    border: none;
+    border-radius: 8px;
+  }
+  .coment-img {
+    color: black !important;
+    padding: 10px;
+     width: 250px; /* Ancho del div */
+    height: 100px; /* Altura del div */
+    border-radius: 10px;
+    overflow: hidden; /* Oculta el contenido que se desborda del div */
+    white-space: pre-wrap; /* Permite saltos de línea y preserva espacios en blanco */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto desbordado */
+  }
+
+  
+  .button-container-publicacion {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+  }
+  
+  .button-container-publicacion button {
+    color: white;
+    margin-bottom: 12px;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #685aff;
+    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
+  }
+  
+  .div-a-container a:hover {
+    font-size: 18px;
+  }

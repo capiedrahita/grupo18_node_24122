@@ -1,0 +1,70 @@
+@import './color.css';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+  }
+  
+  
+  body {
+    margin: 0;
+  }
+  
+  
+  main {
+    display: block;
+    padding: 30px 60px;
+  }
+  
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color:var(--blanco);
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+a {
+    text-decoration: none;
+}
+
+  
+  img {
+    border-style: none;
+  }
+
+.app {
+    background: var(--negro);
+    display: flex;  
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.encabezado {
+    align-items: center;
+    display:flex;
+    padding: 1rem;
+    background: var(--naranja);
+    
+}
+.contenido {
+    padding: 0 2rem;
+}
+
+.rodapie { 
+    background: var(--naranja);
+    color: var(--negro);
+    padding: 1rem;
+    text-align: center;
+    
+}
