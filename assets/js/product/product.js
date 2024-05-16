@@ -36,6 +36,7 @@ export function createCards(data, titulo) {
   
   // Agregar event listener una vez que se carga el documento
   document.addEventListener("click", function (event) {
+    
     //Si se cliquea obtengo el titulo, id de producto, cantidad y precio para mandar al carrito
     if (event.target && event.target.classList.contains("addToCart")) {
       const cartIcon = event.target;
@@ -55,10 +56,11 @@ export function createCards(data, titulo) {
   });
   //Agrego los titulos, contenedores y Slider al HTML
   function HTML(data) {
+
     let innerHTML = `
       <div class="content--container--especifico">
           <div class="content--title--especifico">
-             <h2>${data.title}</h2>
+             <h2 class="content-title">${title}</h2>
           </div>
           <div class="cards--especifico">
              ${data.cards}
@@ -125,8 +127,8 @@ export function createCards(data, titulo) {
   }
   //Barra de busqueda
 
-  function buscar(productList, texto) {
-    const productosBuscados = productList.produtos.filter(item => 
+  function buscar(texto) {
+    const productosBuscados = paths.productList.produtos.filter(item => 
       item.nombre.includes(texto) || item.descripcion.includes(texto)
     );
     console.log(productosBuscados);
@@ -145,5 +147,6 @@ export function createCards(data, titulo) {
       productAmount: productos.length,
     };
     containerCards(paths);
-    buscar(paths.productList, "Rusia")
+    buscar(texto)
+  
   };

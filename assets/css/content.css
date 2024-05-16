@@ -23,7 +23,7 @@
   box-shadow: 0px 1px 5px 0px var(--grisClaro);
   border-radius: 5px;
 }
-.content--title h2{
+.content--title h2,.content--container--especifico h2{
   font-size: 32px;
   font-weight: 700;
   line-height: 38px;
@@ -170,6 +170,8 @@ a:hover{
   cursor: pointer;
   transform: scale(1.2);
  }
+
+
 /*burbujas
 .balloon{
   border-radius: 5px;

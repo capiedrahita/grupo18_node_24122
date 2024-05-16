@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Figuriando</title>
-    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
     <link href="./assets/css/destaques.css" rel="stylesheet">
     <link href="./assets/css/menu.css" rel="stylesheet">
     <link href="./assets/css/content.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon (2).ico">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon.ico">
 
 
     <!--Google fonts-->
@@ -27,38 +27,7 @@
 </head>
 
 <body class="app">
-    <header class="encabezado">
-        <nav class="menu">
-            <ul class="menu__lista">
-                <li class="menu__item">
-                    <a class="menu__link activo" href="./index.html">
-                        <i class="fas fa-home"></i>
-                        Inicio
-                    </a>
-                    <a class="menu__link" href="./productos.html">
-                        <i class="fas fa-book"></i>
-                        Productos</a>
-                    <a class="menu__link" href="./contacto.html">
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                        Contaco
-                    </a>
-                    <a class="menu__link" href="./login.html">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i>
-                        Loguin
-                    </a>
-                        <a class="menu__link" href="./checkout.html">
-                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                            <span id="cart-count">0</span>
-                            <span id="cart-total">$0</span>
-                        </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="logo">
-            <img class="logo--img" src="./assets/img/logo/Logo10.png">
-        </div>
-
-
+    <header class="encabezado" id="encabezado">
     </header>
     <main class="contenido">
         <section class="destaques">
@@ -87,59 +56,12 @@
         </section>
         
     </main>
-    <footer class="rodapie">
-        <div class="rodapie--conatiner">
-            <div class="footer--servicios">
-                <h3 class="footer--titulo">Nuestros Servicios</h3>
-                <nav class="footer--servicios--menu">
-                    <ul class="footer--menu--lista">
-                        <li class="footer--menu--item">
-                            <a class="footer--menu--link" href="./index.html">
-                                <i class="fas fa-home"></i>
-                                Inicio
-                            </a>
-                            <a class="footer--menu--link" href="./productos.html">
-                                <i class="fas fa-book"></i>
-                                Productos
-                            </a>
-                            <a class="footer--menu--link" href="./contacto.html">
-                                <i class="fa fa-comments" aria-hidden="true"></i>
-                                Contacto
-                            </a>
-                        </li>
-                    </ul>
-                    
-                </nav>
-            </div>
-            <div class="footer--logo">
-                <img class="footer--logo--img" src="./assets/img/logo/Logo10.png">
-            </div>
-            
-            <div>
-                <div class="footer--lista">
-                    <h3 class="footer--titulo">Nuestras Redes</h3>
-                    <ul class="footer--lista--redes">
-                        <li class="footer--lista--redes--item">
-                            <a class="footer--lista--redes--item--link" href="#">
-                                <i class="fa fa-twitter footer--redes--sociales " aria-hidden="true"></i>Twitter
-                            </a>
-                            <a class="footer--lista--redes--item--link" href="#">
-                                <i class="fa fa-facebook footer--redes--sociales" aria-hidden="true"></i>Facebook
-                            </a>
-                            <a class="footer--lista--redes--item--link" href="#">
-                                <i class="fa fa-instagram footer--redes--sociales" aria-hidden="true"></i>Instagram
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-        <div class="footer--copi">
-            Todos los derechos reservados &copy; Grupo 18 - 2024 
-        </div>
+    <footer class="rodapie" id="footer">
+        
     </footer>
     <script type="module" src="assets/products.js"></script>
+    <script type="module" src="assets/js/navbar/navbar.js"></script>
+    <script type="module" src="assets/js/footer/footer.js"></script>
 </body>
 
 </html>
