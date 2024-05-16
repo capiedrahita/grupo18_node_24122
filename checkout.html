@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Figuriando</title>
+    <link rel="stylesheet" href="./assets/css/checkout.css">
+    <link href="./assets/css/menu.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97bc4f541b.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon.ico">
+</head>
+<body>
+    <header class="encabezado" id="encabezado">
+    </header>
+    <div class="padre">
+        <article class="articulo">
+            <form class="semicontenedor" name="formulario" action="show-data.html" target="_blank">
+                <h2>Selecciona forma de pago</h2>
+                <br><br>
+                <div class="selectmedio"  id="opciones">                    
+                    <input type="radio" name="opc" value="1" onchange="mostrar(this.value);">Efectivo contra entrega
+                    <br><br>
+                    <input type="radio" name="opc" value="2" onchange="mostrar(this.value);">Tarjeta de Débito o Crédito
+                    <br><br>
+                    <input type="radio" name="opc" value="3" onchange="mostrar(this.value);">Mercado Pago
+                    <br><br>
+                  </div>
+                  <div class="form-group" id="efectivo" style="display:none;">
+                   <p>Si deseas pagar en efectivo contra entrega, deberas contactarte con el vendedor <br>
+                     para coordinar el encuentro</p>
+                    <br>
+                  </div>
+                  <div class="form-group" id="tarjeta" style="display:none;" >
+                    <label for="tarjeta">Número de tarjeta</label>
+                    <input size="16" type="text" id="cardnumber" name="tarjeta"  minlength="16" maxlength="16">
+                    <label for="tarjeta">Nombre y apellido</label>
+                    <input size="30" type="text" id="name" name="tarjeta">
+                    <br><br>
+                    <label for="tarjeta">Fecha de vencimiento</label>                  
+                    <input size="8" type="date" id="fechavenc" name="tarjeta">
+                    <label for="tarjeta">Codigo de seguridad</label>
+                    <input size="4"type="text" id="codigo" name="tarjeta" minlength="3" maxlength="3">
+                    <br><br>
+                    <label for="tarjeta">DNI del titular de la tarjeta</label>                    
+                    <input type="text"  name="tarjeta" id="dni" minlength="8" maxlength="8"  >
+                    <br><br>
+                  </div>
+                  <div class="form-group" id="mercadopago" style="display:none;">
+                    <label for="mercadopago">Utilice el siguiente Alias para abonar con Mercadopago:</label>
+                    <input type="text" class="form-control" name="mercadopago">
+                  </div>
+                <br><br>
+                <input  class="b-confirmar" id="btn" name="btn" type="submit" value="Confirmar">
+                <button class="b-borrar"  type="reset"  onclick="ocultar()">Borrar datos</button><br><br>
+                <div>
+                  <table class="pays">
+                    <tr>
+                      <td>
+                        <i class="fa-regular fa-credit-card"></i>
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-boxes-packing"></i>
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-comments-dollar"></i>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </form> 
+        </article>
+            <aside class="aside izquierda">              
+              <div class="semicontenedor" ><h2>Resumen de compra</h2>
+                <br>
+                <table class="subtotal">
+                    <tr>
+                      <th>Productos</th>
+                      <th>Subtotal</th>
+                      <th></th>                
+                    </tr>
+                    <tr>
+                      <td>figuritas</td>
+                      <td>$ 8000</td>
+                      <td><i class="fa-regular fa-trash-can"></i></td>                
+                    </tr>
+                    <tr>
+                      <td>Muñeco colección</td>
+                      <td>$ 24000</td>
+                      <td><i class="fa-regular fa-trash-can"></i></td> 
+                    </tr>
+                    <tr>
+                      <td>Lamina</td>
+                      <td>$ 1200</td>
+                      <td><i class="fa-regular fa-trash-can"></i></td>                 
+                    </tr>
+                  </table>
+                  <br>
+                  <hr>
+                  <br>
+                  <table class="total">
+                    <tr>
+                      <th>Cantidad</th>
+                      <th>Total</th>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>$ 33200</td>
+                    </tr>              
+                  </table>
+               </div>                        
+            </aside>
+
+    </div>
+    <footer class="rodapie" id="footer">
+        
+    </footer>
+    <script src="./assets/js/checkout/selectivo.js"></script>
+    <script type="module" src="assets/js/navbar/navbar.js"></script>
+    <script type="module" src="assets/js/footer/footer.js"></script>
+</body>
+</html>

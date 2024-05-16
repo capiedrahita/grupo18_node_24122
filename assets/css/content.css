@@ -1,0 +1,237 @@
+@import './color.css';
+
+:root {
+  --gap: 2%; 
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 100%; 
+
+}
+
+.content--title, .content--card{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.content--card{
+  box-shadow: 0px 1px 5px 0px var(--grisClaro);
+  border-radius: 5px;
+}
+.content--title h2,.content--container--especifico h2{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  color:var(--blanco);
+}
+
+.content--title div{
+  align-items: center;
+  display: flex;
+}
+
+.content--title, .content--title--especifico{
+  column-gap: 10px;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+
+}
+.content--card img, .content--card--especifico img{
+  height: 100%;
+  width: auto;
+  box-shadow: 0px 1px 5px 0px var(--gris);
+}
+.content--button{
+  color:var(--gris);
+  background-color: var(--blanco);
+  padding: 0.8rem;
+  border-radius: 0px 10px;
+
+}
+
+.card--container{
+  display: flex;
+  width:100%;
+
+}
+
+
+.cards{
+  column-gap: var(--gap);
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  padding: 10px 0;
+  row-gap: 15px;
+  width: 100%;
+}
+
+.cards--especifico{
+  column-gap: var(--gap);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  row-gap: 15px;
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.content--card img{
+  max-height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content--card{
+  background-color: var(--grisClaro);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between; 
+  padding: 10px;
+  row-gap: 12px;
+  width: calc((100% / 6) - (var(--gap) - (var(--gap) / 6)));
+  overflow: hidden;
+
+}
+.content--card--especifico{
+  background-color: var(--grisClaro);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  row-gap: 12px;
+}
+
+.card--info{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.content--card--title{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.content--card--price, .content--card a{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+.content--card--price, .content--card--cantidad, .content--card--title{
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.content--card--icon{
+  color: var(--gris);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+.span{
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  vertical-align: center;
+}
+.span img{
+  height: 50px;
+  background-color: var(--negro);
+
+}
+.span:nth-last-of-type(2) img{
+  transform: rotate(180deg)
+}
+
+a:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.fa-shopping-cart:hover, .fa-commenting:hover{
+  cursor: pointer;
+  transform: scale(1.8);
+}
+
+ .content--button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+ }
+
+
+/*burbujas
+.balloon{
+  border-radius: 5px;
+  border-color: 1px solid var(--negro);
+  background-color: var(--gris);
+  color: floralwhite;
+  padding: 10px;
+  width: 120px;
+  }
+
+  .balloon:before {
+    content:"";
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin: -30px 0 0 40px;
+    border-bottom: 20px solid chocolate;
+    border-right: 18px solid transparent;
+    border-left: 18px solid transparent;
+    }
+*/
+@media screen and (max-width: 920px) {   
+
+  .content--card{
+    width: calc((100% / 5) - (var(--gap) - (var(--gap) / 5))); 
+  }
+
+}
+
+@media screen and (max-width: 790px) {  
+  .content--card{
+    width: calc((100% / 4) - (var(--gap) - (var(--gap) / 4))); 
+  }
+}
+
+@media screen and (max-width: 668px) {  
+  .content--card{
+    width: calc((100% / 3) - (var(--gap) - (var(--gap) / 3))); 
+  }
+}
+@media screen and (max-width: 545px) {  
+  .content--card{
+    width: calc((100% / 2) - (var(--gap) - (var(--gap) / 2)));      
+  }
+  
+}
+
+@media screen and (max-width: 420px) {  
+  main{
+    padding: 30px 20px;
+  }
+  .content--title h2{
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .content--card--icon a{
+    font-size: 14px;
+  }
+  .content--card{
+    width: 100%;  
+  }
+}
+
