@@ -39,6 +39,12 @@
         
         </footer>
 <!--SCRIPT-->
+<script type="module">
+    import { addToCart, loadCart } from "./assets/js/carrito/carrito.js";
+    window.onload = function () {
+        loadCart();
+    };
+</script>
 <script type="module" src="assets/js/navbar/navbar.js"></script>
 <script type="module" src="assets/js/footer/footer.js"></script>
     </body>
