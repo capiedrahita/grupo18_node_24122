@@ -1,5 +1,4 @@
 
-
     const nav = document.getElementById("encabezado");
     nav.innerHTML = `
     <nav class="menu">
@@ -13,7 +12,7 @@
                             <i class="bi bi-file-person-fill"></i>                        Productos</a>
                         <a class="menu__link" href="./contacto.html">
                             <i class="fa fa-comments" aria-hidden="true"></i>
-                            Contaco
+                            Contacto
                         </a>
                         <div class="menu__item--dropdown">
                             <a class="menu__link" href="./login.html" id="login-link">
@@ -23,8 +22,8 @@
                             <div class="dropdown-content">
                                 <a href="./login.html">Ingresar</a>
                                 <a href="./registro.html">Registrate</a>
-                                <a href="./index.html" id="logout-link" onclick="logout()" style="display: none;">Salir</a>
-                                <a href="./perfilDeUsuario.html" id="profile-link" style="display: none;">Ver Perfil</a>
+                                <a href="./index.html" id="logout-link" onclick="logout()">Salir</a>
+                                <a href="./perfilDeUsuario.html" id="profile-link" >Ver Perfil</a>
                             </div>
                         </div>
                         <a class="menu__link" href="./checkout.html">
@@ -39,8 +38,9 @@
                 <img class="logo--img" src="./assets/img/logo/logo5.png">
             </div>
             `;
+    /*
     function actualizarMenuUsuario() {
-        const estaLogueado = false;
+        const estaLogueado = true;
         const profileLink = document.getElementById('profile-link');
         const logoutLink = document.getElementById('logout-link');
                 
@@ -48,11 +48,11 @@
             profileLink.style.display = 'block';
             logoutLink.style.display = 'block';
         } else {
-            profileLink.style.display = 'none';
-            logoutLink.style.display = 'none';
+            profileLink.style.display = 'block';
+            logoutLink.style.display = 'block';
         }
     }
-    /*window.addEventListener('beforeunload', function() {
+    window.addEventListener('beforeunload', function() {
         localStorage.clear();
-    });   */ 
-    document.addEventListener('DOMContentLoaded', actualizarMenuUsuario);
+    });   
+    document.addEventListener('DOMContentLoaded', actualizarMenuUsuario);*/

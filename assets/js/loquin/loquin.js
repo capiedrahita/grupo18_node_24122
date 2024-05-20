@@ -1,4 +1,4 @@
-// login.js
+/*
 export function login() {
     var username = document.querySelector('input[name="user"]').value;
     var password = document.querySelector('input[name="password"]').value;
@@ -19,7 +19,7 @@ export function login() {
     }
 }
 
-function logout() {
+export function logout() {
     // Borrar el estado de login de localStorage
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('username');
@@ -30,7 +30,7 @@ function logout() {
 }
 
 
-function checkLoginStatus() {
+export function checkLoginStatus() {
     const loggedIn = localStorage.getItem('loggedIn');
     const username = localStorage.getItem('username');
 
@@ -49,7 +49,7 @@ function checkLoginStatus() {
 window.onload = function() {
     checkLoginStatus();
 };
-
+*/
 
 
 
