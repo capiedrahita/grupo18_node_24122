@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Figuriando</title>
+    <link href="./assets/css/menu.css" rel="stylesheet">
+    <link href="./assets/css/perfilDeUsuario.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon.ico">
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <!-- Enlaza Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/051ad6be67.js" crossorigin="anonymous"></script>
+
+    <!-- Enlaza Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body class="app">
+    <header class="encabezado" id="encabezado">
+    </header>
+    <main class="container--perfil">
+        <h3 class="perfil--titulo">Datos personales</h3>
+
+        <div class="perfil">
+            <div class="perfil--datos">
+                <div class="perfil--datos--usuario">
+                    <img src="./assets/img/avatar/avatar3.png" class="perfil--datos--usuario--img">
+                    <p>Nombre: Juan</p>
+                    <p>Apellido:Sanchez</p>
+                    <p>Usuario: figuriando</p>
+                    <p>Email: Figuriando@figu.com</p>
+                    <p>Teléfono: 11-1234-5678</p>
+                    <div>
+                        <button class="perfil--datos--usuario--button">Modificar</button>
+                        <a href="./grilla2.html">
+                            <button class="perfil--datos--usuario--button">Lista Figuritas</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="perfil--datos">
+                <div class="perfil--datos--usuario">
+                    <img src="./assets/img/mapa/2005.jpg" class="perfil--datos--usuario--img">
+                    <p>Calle: CuchaCucha</p>
+                    <p>Nro: 2055</p>
+                    <p>Piso: 1</p>
+                    <p>Departamento: 5</p>
+                    <p>Localidad: CABA</p>
+                    <button class="perfil--datos--usuario--button">Modificar</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor--titulo--publicaciones">
+            <h3 class="perfil--titulo">Publicaciones</h3>
+            <button class="perfil--datos--usuario--button">Nueva Puclicación</button>
+
+        </div>
+        <div class="perfil--publicaciones">
+            <div class="perfil--publicaciones--lista">
+
+                <table class="perfil--publicaciones--lista--table">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Titulo</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Modificar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="perfil--publicaciones--lista--imagen">
+                                <img src="./assets/img/albums/album2.jpg">
+                            </td>
+                            <td>Publicación:1</td>
+                            <td>Cantidad:10</td>
+                            <td>Precio: $1000</td>
+                            <td>
+                                <button class="perfil--publicaciones--button">Modificar</button>
+                                <button class="perfil--publicaciones--button">Borrar</button>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="perfil--publicaciones--lista--imagen">
+                                <img src="./assets/img/coleccion/coleccion1.jpg">
+                            </td>
+                            <td>Publicación:2</td>
+                            <td>Cantidad:10</td>
+                            <td>Precio: $1000</td>
+                            <td>
+                                <button class="perfil--publicaciones--button">Modificar</button>
+                                <button class="perfil--publicaciones--button">Borrar</button>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="perfil--publicaciones--lista--imagen">
+                                <img src="./assets/img/figuritas/figurita13.jpg">
+                            </td>
+                            <td>Publicación:3</td>
+                            <td>Cantidad:10</td>
+                            <td>Precio: $1000</td>
+                            <td>
+                                <button class="perfil--publicaciones--button">Modificar</button>
+                                <button class="perfil--publicaciones--button">Borrar</button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <h3 class="perfil--titulo">Mensajes</h3>
+        <div class="perfil--mensajes">
+            <table class="perfil--mensajes--lista--table">
+                <thead>
+                    <tr>
+                        <th>Publicacion</th>
+                        <th>Consulta</th>
+                        <th>Respuesta</th>
+                        <th>Enviar Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Publicación:1</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. At accusamus ad laboriosam esse
+                            reiciendis aspernatur cumque commodi voluptatem sit quisquam, id officiis. Voluptas
+                            distinctio repellendus aut similique accusamus consequatur eius!</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum labore ducimus, reprehenderit
+                            aut non saepe quo, possimus adipisci nesciunt voluptatum, ipsa excepturi asperiores dolore
+                            rerum temporibus officiis fugiat exercitationem voluptates?</td>
+                        <td><button class="perfil--publicaciones--button">Responder</button></td>
+                    </tr>
+                    <tr>
+                        <td>Publicación:2</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. At accusamus ad laboriosam esse
+                            reiciendis aspernatur cumque commodi voluptatem sit quisquam, id officiis. Voluptas
+                            distinctio repellendus aut similique accusamus consequatur eius!</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum labore ducimus, reprehenderit
+                            aut non saepe quo, possimus adipisci nesciunt voluptatum, ipsa excepturi asperiores dolore
+                            rerum temporibus officiis fugiat exercitationem voluptates?</td>
+                        <td><button class="perfil--publicaciones--button">Responder</button></td>
+                    </tr>
+                    <tr>
+                        <td>Publicación:3</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. At accusamus ad laboriosam esse
+                            reiciendis aspernatur cumque commodi voluptatem sit quisquam, id officiis. Voluptas
+                            distinctio repellendus aut similique accusamus consequatur eius!</td>
+                        <td></td>
+                        <td><button class="perfil--publicaciones--button">Responder</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <footer class="rodapie" id="footer">
+
+    </footer>
+    <!--SCRIPTS-->
+    <script type="module">
+        import { addToCart, loadCart } from "./assets/js/carrito/carrito.js";
+        window.onload = function () {
+            loadCart();
+        };
+    </script>
+    <script type="module" src="assets/js/perfil/perfil.js"></script>
+    <script type="module" src="assets/js/navbar/navbar.js"></script>
+    <script type="module" src="assets/js/footer/footer.js"></script>
+</body>
+
+</html>

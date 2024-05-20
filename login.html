@@ -28,7 +28,7 @@
             <div class="form">
                 <input type="text" placeholder="Usuario" name="user" />
                 <input type="password" placeholder="Contraseña" name="password" />
-                <button> Entrar </button>
+                <button  type="button" onclick="login()"> Entrar </button>
                 <a href="./registro.html"> <p> No tienes una cuenta? Registrarse </p></a>
             </div>
         </div>
@@ -36,6 +36,17 @@
         
         </footer>
 <!--SCRIPT-->
+<script type="module">
+    import { checkLoginStatus, logout } from '/assets/js/loquin/loquin.js';
+
+    window.onload = function() {
+        checkLoginStatus();
+        document.getElementById('logout-link').addEventListener('click', logout);
+    };
+</script>
+<script type="module" src="assets/js/loquin/loquin.js"></script>
+<script type="module" src="assets/js/loquin/status.js"></script>
+
 <script type="module" src="assets/js/navbar/navbar.js"></script>
 <script type="module" src="assets/js/footer/footer.js"></script>
     </body>

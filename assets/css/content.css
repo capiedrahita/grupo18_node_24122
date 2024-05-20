@@ -171,28 +171,6 @@ a:hover{
   transform: scale(1.2);
  }
 
-
-/*burbujas
-.balloon{
-  border-radius: 5px;
-  border-color: 1px solid var(--negro);
-  background-color: var(--gris);
-  color: floralwhite;
-  padding: 10px;
-  width: 120px;
-  }
-
-  .balloon:before {
-    content:"";
-    width: 0;
-    height: 0;
-    position: absolute;
-    margin: -30px 0 0 40px;
-    border-bottom: 20px solid chocolate;
-    border-right: 18px solid transparent;
-    border-left: 18px solid transparent;
-    }
-*/
 @media screen and (max-width: 920px) {   
 
   .content--card{

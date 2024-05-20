@@ -1,175 +1,157 @@
 @import './color.css';
+.app{
+  background-color: var(--gris);
+  font-family: 'Acme';
+  letter-spacing: 1px;
 
-.flex-container {
-    padding: 4px;
-    display:flex;
-    flex-direction: row;
-  }
+}
+.container--perfil{
+  position: relative;
+  padding: 20px;
+  overflow: hidden; 
+  font-size: large;
+}
+
+.container--perfil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/fondo/pngwing.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5; 
+  z-index: -1; 
   
-  .item-card-perfil {
-    background-image: url("../img/fondo/fondo-blanco-figuras-geometricas-colores_578340-31.avif");
+}
+.perfil--titulo{
+  color: var(--naranja);
+  text-shadow: 2px 2px var(--negro);
+  font-size:3rem;
+  margin-left: 50px;
+}
+.perfil{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.perfil--datos{
+  flex: 1; 
+  box-sizing: border-box;
+}
+  .perfil--datos--usuario, 
+  .perfil--publicaciones, 
+  .perfil--mensajes, 
+  .perfil--datos--domicilio{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    place-content: center;
-    min-width: 300px;
-    max-height: 500px;
-    background-color:var(--negro);
-    border: 1px solid black;
-    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
-    border-radius: 10px;
-  }
-  
-  .contenedor-de-datos-perfil {
-    display: flex;
-    flex-direction: column;
-    color: var(--negro);
+    color: var(--blanco);
     min-width: 280px;
     margin: 50px;
     padding: 20px;
     border: 1px solid black;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0px 2px 8px 0px rgb(178, 178, 178);
+    background-color: var(--negro);
+
   }
-  
-  .card-pefil-img-container {
+
+  .perfil--publicaciones, 
+  .perfil--mensajes{
+    overflow-x:auto;
+  }
+
+  .perfil--publicaciones--lista, 
+  .perfil--mensajes--lista{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
   }
-  .item_parrafo{
-    color:var(--negro);
-    font-size: 1.1rem;
-    font-weight: bold;
+  .contenedor--titulo--publicaciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right:50px ;
+
   }
-  .card-pefil-img-container img {
+  .perfil--datos--usuario--img{
     text-align: center;
     width: 120px;
     height: 120px;
-    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
+    background-color: transparent;
   }
-  
-  .item-card-informacionContacto-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  .content--button--perfil{
+  .perfil--datos--usuario--button, 
+  .perfil--publicaciones--button{
     background-color: var(--gris);
     color:var(--blanco);
     padding: 1rem;
     border-radius: 0.5rem;
+    width: 10rem;
+    font-family: 'Acme';
+    font-size: large;
+
   }
- 
-  .content--button--perfil:hover{
+
+  .perfil--datos--usuario--button:hover, 
+  .perfil--publicaciones--button:hover{
     font-size: 17px;
     color: var(--naranja);
     text-decoration: none;
   }
-  
-  .button-container button {
-    margin-top: 32px;
-    border: none;
-    color:var(--negro);
-    margin-bottom: 12px;
-    border: none;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #685aff;
-    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
-  }
-  
-  .item-card-perfil-publicacion {
-    display: flex;
-    justify-content: center;
-    max-width: 300px;
-    max-height: 455px;
-    background-color: var(--negro);
-    border: 1px solid black;
-    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
-    border-radius: 10px;
-    transition: background-color 2s;
-  }
-  
-  .item-card-perfil-publicacion:hover {
-  color: var(--negro);
-  background-color: black;
-  }
-  
-  .item-card-perfil-publicacion a {
-    color: #000;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 8px;
-  }
-  
-  
-  .item-card-perfil-publicacion a:hover {
-  color: white;
-  }
-  
-  
-  .img-publicacion-container {
-  display: flex;
-  }
-  
-  
-  
-  .img-publicacion {
-    border: 5px solid white;
-    border-radius: 10px;
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0px 1px 15px 0px rgb(54, 54, 54);
-  }
-  
-  .coment-container {
-    position: absolute;
-   align-self: flex-end;
-   background-color: white;
-    border: none;
-    border-radius: 8px;
-  }
-  .coment-img {
-    color: black !important;
-    padding: 10px;
-     width: 250px; /* Ancho del div */
-    height: 100px; /* Altura del div */
-    border-radius: 10px;
-    overflow: hidden; /* Oculta el contenido que se desborda del div */
-    white-space: pre-wrap; /* Permite saltos de línea y preserva espacios en blanco */
-    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto desbordado */
+  .perfil--publicaciones--lista--table th, 
+  .perfil--mensajes--lista--table th{
+    background-color: rgba(253, 112, 20, 0.3); 
+    box-shadow: 0px 2px 8px 0px var(--naranja);
+    padding: 1rem;
+
   }
 
+  .perfil--publicaciones--lista--table td,
+  .perfil--mensajes--lista--table td{
+    box-shadow: 0px 2px 8px 0px var(--naranja);
+    background-color: transparent;
+    padding: 1rem;
+  }
+  .perfil--publicaciones--lista--imagen img{
+    height: 3rem !important;
+    width: auto; /* Mantén la proporción de la imagen */
+  }
+
+  @media screen and (max-width: 820px) {   
+
+    .perfil--datos--usuario,
+    .perfil--publicaciones,
+    .perfil--mensajes{
+      margin: 30px;
+      padding: 10px;
+    }
+ 
+  }
+  @media screen and (max-width: 740px) {   
+
+    .perfil--datos--usuario,
+    .perfil--publicaciones,
+    .perfil--mensajes{
+      margin: 15px;
+      padding: 5px;
+    }
   
-  .button-container-publicacion {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: none;
-    padding: 6px;
-    border-radius: 4px;
+  }
+
+  @media screen and (max-width: 680px) {   
+
+    .perfil--datos--usuario,
+    .perfil--publicaciones,
+    .perfil--mensajes{
+      margin: 3px;
+      padding: 3px;
+    }
+    .perfil{
+     flex-direction: column;
+    }
+  
   }
   
-  .button-container-publicacion button {
-    color: white;
-    margin-bottom: 12px;
-    border: none;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #685aff;
-    box-shadow: 0px 2px 8px 0px rgb(54, 54, 54);
-  }
-  
-  .div-a-container a:hover {
-    font-size: 18px;
-  }
