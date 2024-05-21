@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Figuriando</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/contacto.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link href="./assets/css/menu.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/598504b1dd.js" crossorigin="anonymous"></script>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body class="app">
+    <header class="encabezado" id="encabezado">
+    </header>
+    <div class="contenedor--contacto">
+        <div class="contenedor--contacto--principal">
+            <h2 class="contenedor--contacto--principal--titulo">Mandanos un mensaje y nos pondremos en contacto cuanto antes</h2>
+            <form class="contenedor--formulario" id="contactForm">
+
+                <div class="contenedor--formulario--fila">
+                    <label for="validationTooltip01" class="contacto--form--label"></label>
+                    <input type="text" class="contacto--form--input" id="apellido" placeholder="Nombre" required >
+
+                    <label for="validationTooltip02" class="contacto--form--label"></label>
+                    <input type="text" class="contacto--form--input" id="nombre" placeholder="Apellido" required>
+
+                </div>
+                <div class="contenedor--formulario--fila">
+                    <label for="validationTooltipMail" class="contacto--form--label"></label>
+                    <input type="text" class="contacto--form--input" id="email"
+                        placeholder="tucorreo@mail.com" placeholder="email">
+
+                    <label for="validationTooltip03" class="contacto--form--label"></label>
+                    <input type="number" class="contacto--form--input" id="telefono" placeholder="011 1234 5678" required>
+                </div>
+                <div class="contenedor--formulario--fila">
+                    <label for="archivo" class="contacto--form--label--file"></label>
+                    <input type="file" class="contacto--form--file" id="archivo"  name="archivo">
+                    <label for="asunto" placeholder="Seleccione una motivo" class="contacto--form--label"></label>
+                    <select class="contacto--form--select" id="asunto" required>
+                        <option value="reclamo">Reclamos</option>
+                        <option value="sugerencia">Sugerencias</option>
+                        <option value="otro">Otros</option>
+                    </select>
+                </div>
+                <div class="contenedor--formulario--fila">
+                    <label for="mensaje" class="contacto--form--label"></label>
+                    <textarea class="contacto--form--textarea" id="mensaje" rows="10" cols="30" placeholder="Ingrese su comentario"></textarea>
+                </div>
+                <div class="contenedor--formulario--fila">
+                    <div class="contenedor--formulario--fila">
+                        <label for="rating" class="contacto--form--label">Calificación:</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 estrellas">&#9733;</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 estrellas">&#9733;</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 estrellas">&#9733;</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 estrellas">&#9733;</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 estrella">&#9733;</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="condition" class="contacto--form--check" id="condition">
+                        <label for="term" id="condition">Acepto los términos y condiciones</label>
+                    </div>
+                   
+                </div>
+                <button type="submit" value="enviar" class="contenedor--formulario--button">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <footer class="rodapie" id="footer">
+
+    </footer>
+    <script type="module">
+        import { addToCart, loadCart } from "./assets/js/carrito/carrito.js";
+        window.onload = function () {
+            loadCart();
+        };
+    </script>
+    <script type="module" src="assets/js/navbar/navbar.js"></script>
+    <script type="module" src="assets/js/footer/footer.js"></script>
+    <script src="./assets/js/contacto/contacto.js"></script>
+</body>
+
+</html>

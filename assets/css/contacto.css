@@ -1,0 +1,119 @@
+@import './color.css';
+
+.contenedor--formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor--contacto--principal--titulo{
+    color:var(--gris);
+    margin-bottom:1rem;
+}
+.contenedor--formulario--fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor--contacto--principal {
+    background-color: var(--naranja);
+    margin-right: 15rem;
+    margin-left: 15rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.contacto--form--input, 
+.contacto--form--select,
+.contacto--form--textarea,
+.contacto--form--file {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #555;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--blanco);
+    margin-bottom: 2rem;
+    margin-right: 0.5rem;
+}
+.contenedor--formulario--button {
+    background-color: var(--gris);
+    color: var(--blanco);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 10rem;
+    font-family: 'Acme';
+    font-size: large;
+    margin-top: 2rem;
+    box-shadow: 0px 2px 8px 0px var(--blanco);
+}
+
+.contenedor--formulario--button:hover {
+    font-size: 25px;
+    color: var(--naranja);
+    text-decoration: none;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    color: var(--negro);
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+    color: var(--blanco);
+}
+
+.rating input:not(:checked) ~ label:hover,
+.rating input:not(:checked) ~ label:hover ~ label {
+    color: var(--gris);
+}
+
+@media screen and (max-width: 1055px) {
+    .contenedor--contacto--principal {
+        margin-right: 10rem;
+        margin-left: 10rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .contenedor--contacto--principal {
+        margin-right: 5rem;
+        margin-left: 5rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+}
+@media screen and (max-width: 630px) {
+    .contenedor--contacto--principal {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        padding: 0.1rem;
+        border-radius: 0.2rem;
+    }
+    .contenedor--formulario--fila {
+        flex-direction: column;
+    }
+}

@@ -10,7 +10,7 @@
                         </a>
                         <a class="menu__link" href="./productos.html">
                             <i class="bi bi-file-person-fill"></i>                        Productos</a>
-                        <a class="menu__link" href="./contacto.html">
+                        <a class="menu__link" href="./contacto2.html">
                             <i class="fa fa-comments" aria-hidden="true"></i>
                             Contacto
                         </a>
