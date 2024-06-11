@@ -79,6 +79,7 @@ export function containerCards(paths) {
         paths.productList.forEach((item, index) => {
             let data = { product: item, index: index };
             let cardContainer = createCards(data, item.titulo);
+            console.log(data)
             let info = { title: item.titulo, cards: cardContainer, path: paths };
             cardSection.innerHTML += HTML(info);
         });
