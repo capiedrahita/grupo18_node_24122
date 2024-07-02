@@ -6,15 +6,15 @@ foot.innerHTML = `
                 <nav class="footer--servicios--menu">
                     <ul class="footer--menu--lista">
                         <li class="footer--menu--item">
-                            <a class="footer--menu--link" href="./index.html">
+                            <a class="footer--menu--link" href="/">
                                 <i class="fas fa-home"></i>
                                 Inicio
                             </a>
-                            <a class="footer--menu--link" href="./productos.html">
+                            <a class="footer--menu--link" href="/productos">
                                 <i class="fas fa-book"></i>
                                 Productos
                             </a>
-                            <a class="footer--menu--link" href="./contacto.html">
+                            <a class="footer--menu--link" href="/contacto2">
                                 <i class="fa fa-comments" aria-hidden="true"></i>
                                 Contacto
                             </a>
@@ -24,7 +24,7 @@ foot.innerHTML = `
                 </nav>
             </div>
             <div class="footer--logo">
-                <img class="footer--logo--img" src="./assets/img/logo/logo5.png">
+                <img class="footer--logo--img" src="/assets/img/logo/logo5.png">
             </div>
             
             <div>

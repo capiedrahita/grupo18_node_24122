@@ -67,43 +67,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Manejo de selección de estrellas
-    const stars = document.querySelectorAll('.rating input');
+    const stars = document.querySelectorAll('.star');
 
-    stars.forEach(star => {
-        star.addEventListener('change', () => {
-            let checked = false;
-            stars.forEach(s => {
-                if (s.checked) {
-                    checked = true;
-                }
-                s.nextElementSibling.style.color = checked ? "#f5b301" : "#ddd";
-            });
-        });
-    });
+    let star_opcion;
 
-    const labels = document.querySelectorAll('.rating label');
-    labels.forEach(label => {
-        label.addEventListener('mouseover', () => {
-            label.style.color = '#f5b301';
-            let prevLabel = label.previousElementSibling;
-            while (prevLabel) {
-                prevLabel.style.color = '#f5b301';
-                prevLabel = prevLabel.previousElementSibling;
+    stars.forEach((star,index) => {
+        star.addEventListener('click', () => {
+            for(let i=0;i<=index;i++){
+                stars[i].classList.add('checked');
             }
-        });
-
-        label.addEventListener('mouseout', () => {
-            labels.forEach(l => l.style.color = '#ddd');
-            stars.forEach(star => {
-                if (star.checked) {
-                    star.nextElementSibling.style.color = '#f5b301';
-                    let prevLabel = star.nextElementSibling.previousElementSibling;
-                    while (prevLabel) {
-                        prevLabel.style.color = '#f5b301';
-                        prevLabel = prevLabel.previousElementSibling;
-                    }
-                }
-            });
+            for(let i=index+1;i<stars.length;i++){
+                stars[i].classList.remove('checked');
+            }
+        star_opcion = index + 1; // Actualizar star_opcion después de los bucles
+        console.log(star_opcion);
+        
         });
     });
+
+    
+
+
 });

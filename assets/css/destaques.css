@@ -23,38 +23,38 @@
 }
 
 .destaques__principal {
-    background: url('../img/albums/album-copa-america-974x550.png') center / cover no-repeat;
+    background: url('../img/destaques/album-copa-america-974x550.png') center / cover no-repeat;
     grid-column: 1 / 4;
     grid-row: 1 / 3;
 
 }
 
 .destaques__secundario:nth-child(2) {
-    background: url('../img/figuritas/figurita1.jpg') center / cover no-repeat;
+    background: url('../img/destaques/figurita1.jpg') center / cover no-repeat;
     grid-column: 4 / 4;
     grid-row: 1 / 1;
     
 }
 
 .destaques__secundario:nth-child(3) {
-    background: url('../img/comics/comic12.jpg') center / cover no-repeat;
+    background: url('../img/destaques/comic12.jpg') center / cover no-repeat;
     grid-column: 4 / 4;
     grid-row: 2 / 2;
 }
 
 .destaques__secundario:nth-child(4) {
-    background: url('../img/manga/manga1.webp') center / cover no-repeat;
+    background: url('../img/destaques/manga1.jpg') center / cover no-repeat;
     grid-column: 4 / 4;
     grid-row: 3 / 3;
 }
 
 .destaques__secundario:nth-child(5) {
-    background: url('../img/coleccion/coleccion1.jpg') center / cover no-repeat;
+    background: url('../img/destaques/coleccion1.jpg') center / cover no-repeat;
     grid-column: 3 / 3;
     grid-row: 3 / 3;
 }
 .destaques__terciario {
-    background: url('../img/eventos/evento9.avif') center / cover no-repeat;
+    background: url('../img/destaques/evento9.avif') center / cover no-repeat;
     grid-column: 1/3;
     grid-row: 3 / 3;
 

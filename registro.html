@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Figuriando</title>
-        <link rel="stylesheet" href="./assets/css/loginstyle.css">
-        <link href="./assets/css/menu.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="./assets/img/logo/favicon.ico">
+        <link rel="stylesheet" href="/assets/css/loginstyle.css">
+        <link href="/assets/css/menu.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/assets/img/logo/favicon.ico">
 
             <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,28 +24,29 @@
         <div class="login-wrap">
             <h2>Registro</h2>
 
-            <div class="form">
-                <input type="text" placeholder="Nombre" name="name" />
-                <input type="text" placeholder="Apellido" name="lastName" />
+            <form class="form" id="registerForm">
+                <input type="text" placeholder="Nombre" name="nombre" />
+                <input type="text" placeholder="Apellido" name="apellido" />
                 <input type="text" placeholder="Correo" name="email" />
-                <input type="password" placeholder="Contraseña" name="password" />
+                <input type="password" placeholder="Contraseña" name="contrasenia" />
 
 
-                <button> Registrar </button>
+                <button type="submit"> Registrar </button>
                 <!-- <a href="#"> <p> No tienes una cuenta? Registrarse </p></a> -->
-            </div>
+            </form>
         </div>
         <footer class="rodapie" id="footer">
         
         </footer>
 <!--SCRIPT-->
 <script type="module">
-    import { addToCart, loadCart } from "./assets/js/carrito/carrito.js";
+    import { addToCart, loadCart } from "/assets/js/carrito/carrito.js";
     window.onload = function () {
         loadCart();
     };
 </script>
-<script type="module" src="assets/js/navbar/navbar.js"></script>
-<script type="module" src="assets/js/footer/footer.js"></script>
+<script type="module" src="/assets/js/navbar/navbar.js"></script>
+<script type="module" src="/assets/js/footer/footer.js"></script>
+<script src="/assets/registro.js"></script>
     </body>
 </html>

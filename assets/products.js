@@ -1,4 +1,3 @@
-import { lista } from "./js/fakeAPI/productos.js";
 import { slider } from "./js/slider/slider.js";
 import { addToCart, loadCart } from "./js/carrito/carrito.js";
 
@@ -7,14 +6,15 @@ export function createCards(data, titulo) {
     // Creo el contenedor
     var cardContainer = "";
     // Itero sobre la lista y creo las tarjetas
-    data.product.produtos.map((element) => {
+    data.product.productos.map((element) => {
+
         let a = `
         <div class="content--card">
-            <img src="${element.infos.img}" alt="${element.infos.alt}">
+            <img src="${element.infos.img}" alt="${element.infos.titulo}">
             <div class="card--info">
                 <p class="content--card--title">${element.infos.nombre}</p>
                 <p class="content--card--price">$ ${element.infos.precio}</p>
-                <p class="content--card--cantidad">Cantidad:${element.infos.cantidad}</p>
+                <p class="content--card--cantidad">Cantidad: ${element.infos.cantidad}</p>
                 <div class="content--card--icon">
                     <i class="fa fa-shopping-cart addToCart" aria-hidden="true" data-titulo=${titulo} data-product-id="${element.infos.id}" data-quantity="1" data-price="${element.infos.precio}"></i>
                     <i class="fa fa-commenting" aria-hidden="true"></i>
@@ -24,7 +24,7 @@ export function createCards(data, titulo) {
         // Agrego la tarjeta al contenedor
         cardContainer += a;
     });
-    // Retornno el contenedor con las tarjetas
+    // Retorno el contenedor con las tarjetas
     return cardContainer;
 }
 
@@ -68,7 +68,7 @@ function HTML(data) {
 }
 
 window.verTodo = function(titulo) {
-    window.location.href = `./product.html?titulo=${titulo}`;
+    window.location.href = `./productos/${titulo.toLowerCase()}`;
 };
 
 export function containerCards(paths) {
@@ -103,11 +103,46 @@ export function containerCards(paths) {
 window.onload = function () {
     loadCart();
 
-    const paths = {
-        productList: lista,
-        productAmount: lista.length,
-        imgSlider: "./assets/img/flecha/setaSlider.png",
-    };
+    fetch('/api/productos')
+        .then(response => response.json())
+        .then(productos => {
+            const transformData = (productos) => {
+                return productos.reduce((acc, entry) => {
+                    const { tipo, publicacion_id, titulo, precio, cantidad, nombre,extension } = entry;
+                    const producto = {
+                        infos: {
+                            id: publicacion_id,
+                            nombre: titulo,
+                            img: `repoImagenes/${nombre}${extension}`,
+                            precio,
+                            alt: `Descripción de ${titulo}`,
+                            cantidad,
+                        },
+                    };
 
-    containerCards(paths);
+                    if (!acc[tipo]) {
+                        acc[tipo] = {
+                            titulo: tipo.charAt(0).toUpperCase() + tipo.slice(1),
+                            productos: [],
+                        };
+                    }
+
+                    acc[tipo].productos.push(producto);
+                    return acc;
+                }, {});
+            };
+
+            const transformedData = transformData(productos);
+
+            const lista = Object.values(transformedData);
+
+            const paths = {
+                productList: lista,
+                productAmount: lista.length,
+                imgSlider: "./assets/img/flecha/setaSlider.png",
+            };
+
+            containerCards(paths);
+        })
+        .catch(error => console.error('Error fetching data:', error));
 };
